@@ -1,0 +1,11 @@
+doxygen/doxygen_new_line_after_brief=true
+doxygen/doxygen_use_brief_tag=false
+doxygen/doxygen_use_javadoc_tags=true
+doxygen/doxygen_use_pre_tag=false
+doxygen/doxygen_use_structural_commands=false
+eclipse.preferences.version=1
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1481604399/PATH/delimiter=;
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1481604399/PATH/operation=replace
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1481604399/PATH/value=${eclipse_home}\\..\\gcc_linux_eabi_armhf\\bin;C\:/root/SMARtDEV/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_14.0.2.v20200815-0932/jre/bin/server;C\:/root/SMARtDEV/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_14.0.2.v20200815-0932/jre/bin;C\:\\Windows;C\:\\Windows\\system32;C\:\\root\\SMARtDEV;C\:\\root\\SMARtDEV\\git\\cmd;C\:\\root\\SMARtDEV\\jdk-15\\bin;C\:\\root\\SMARtDEV\\Python3;C\:\\root\\SMARtDEV\\gcc_linux_abi_x86_64\\bin;C\:\\root\\SMARtDEV\\gcc_linux_abi_x86_64\\x86_64-linux-gnu\\sysroot;C\:\\root\\SMARtDEV\\qemu_x86_64;C\:\\root\\SMARtDEV\\eclipse;C\:\\root\\SMARtDEV
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1481604399/append=true
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1481604399/appendContributed=true

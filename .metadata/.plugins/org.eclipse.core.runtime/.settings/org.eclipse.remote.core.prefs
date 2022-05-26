@@ -1,0 +1,8 @@
+connections/org.eclipse.remote.JSch/Remote+Host/JSCH_ADDRESS_ATTR=localhost
+connections/org.eclipse.remote.JSch/Remote+Host/JSCH_IS_PASSWORD_ATTR=true
+connections/org.eclipse.remote.JSch/Remote+Host/JSCH_LOGIN_SHELL_COMMAND_ATTR=/bin/bash -l -c '{0}'
+connections/org.eclipse.remote.JSch/Remote+Host/JSCH_PORT_ATTR=22
+connections/org.eclipse.remote.JSch/Remote+Host/JSCH_TIMEOUT_ATTR=0
+connections/org.eclipse.remote.JSch/Remote+Host/JSCH_USERNAME_ATTR=osm0
+connections/org.eclipse.remote.JSch/Remote+Host/JSCH_USE_LOGIN_SHELL_ATTR=true
+eclipse.preferences.version=1
