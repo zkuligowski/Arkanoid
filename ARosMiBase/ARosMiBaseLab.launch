@@ -2,7 +2,7 @@
 <launchConfiguration type="org.eclipse.cdt.launch.remoteApplicationLaunchType">
     <booleanAttribute key="org.eclipse.cdt.dsf.gdb.AUTO_SOLIB" value="true"/>
     <listAttribute key="org.eclipse.cdt.dsf.gdb.AUTO_SOLIB_LIST"/>
-    <stringAttribute key="org.eclipse.cdt.dsf.gdb.DEBUG_NAME" value="arm-linux-gnueabihf-gdb"/>
+    <stringAttribute key="org.eclipse.cdt.dsf.gdb.DEBUG_NAME" value="D:\OSM\SMARtDEV.v.0.12\SMARtDEV\gcc_linux_eabi_armhf\bin\arm-linux-gnueabihf-gdb.exe"/>
     <booleanAttribute key="org.eclipse.cdt.dsf.gdb.DEBUG_ON_FORK" value="true"/>
     <booleanAttribute key="org.eclipse.cdt.dsf.gdb.EXTERNAL_CONSOLE" value="false"/>
     <stringAttribute key="org.eclipse.cdt.dsf.gdb.GDB_INIT" value=".gdbinit"/>
@@ -40,7 +40,7 @@
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
         <listEntry value="4"/>
     </listAttribute>
-    <stringAttribute key="org.eclipse.debug.core.REMOTE_TCP" value="Remote Real Host"/>
+    <stringAttribute key="org.eclipse.debug.core.REMOTE_TCP" value="Local"/>
     <listAttribute key="org.eclipse.debug.ui.favoriteGroups">
         <listEntry value="org.eclipse.debug.ui.launchGroup.debug"/>
         <listEntry value="org.eclipse.debug.ui.launchGroup.run"/>

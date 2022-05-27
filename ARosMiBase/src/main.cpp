@@ -7,57 +7,88 @@
 int main(int argc, char *argv[]) {
 	SystemInit();
 	DataPrepare();
+
+	Ball ball;
+	Platform platform;
+	Block block1, block2, block3;
+
 	while (1) {
 		UpdateIO();
 		PrintDiagnosticInfo();
 		ClearScreen();
-		DrawObjects();
+		//background
+		for (int x = 1; x <= 639; x++) {
+			for (int y = 1; y <= 479; y++) {
+
+				SetPixel(GRAPH, x, y, 0x0000ff);
+			}
+		}
+
+		ball.DrawBall();
+		ball.MoveBall();
+		platform.DrawPlatform();
+		block1.DrawBlock(100, 100, 50, 20);
+		block2.DrawBlock(200, 100, 50, 20);
+		block3.DrawBlock(300, 100, 50, 20);
+
+
+		if((ball.getY() + 10) ==  480)
+			printf("%d\n", 1);
+
+
+
+
+		for (int i = 300; i < 350; i++) {
+			for (int j = 300; j < 350; j++) {
+				SetPixel(GRAPH, i, j, 0xff);
+			}
+		}
+
+		//DrawObjects();
 		usleep(1000);
 	}
 }
 
-
-void* TimerThread(void* arguments)
-{
-    struct timespec destTime;
-    clock_gettime(CLOCK_MONOTONIC,&destTime);
-	while(1)
-		{
-		destTime.tv_nsec+=1000000;
-		if(destTime.tv_nsec>=1E9)
-		{
-			destTime.tv_nsec-=1E9;
+void* TimerThread(void *arguments) {
+	struct timespec destTime;
+	clock_gettime(CLOCK_MONOTONIC, &destTime);
+	while (1) {
+		destTime.tv_nsec += 1000000;
+		if (destTime.tv_nsec >= 1E9) {
+			destTime.tv_nsec -= 1E9;
 			destTime.tv_sec++;
 		}
 		globalTimer_ms++;
-		if(!(globalTimer_ms%100)) flash_ligth=0xFF;
- 	    clock_nanosleep(CLOCK_MONOTONIC, TIMER_ABSTIME, &destTime, NULL);
-		}
-return NULL;
+		if (!(globalTimer_ms % 100))
+			flash_ligth = 0xFF;
+		clock_nanosleep(CLOCK_MONOTONIC, TIMER_ABSTIME, &destTime, NULL);
+	}
+	return NULL;
 }
 
 void SystemInit() {
 	FrameBufferFD = open("/dev/fb0", O_RDWR);
 	ioctl(FrameBufferFD, FBIOGET_FSCREENINFO, &fix_info);
-	framebuffer = mmap(NULL, fix_info.line_length * 480, PROT_READ | PROT_WRITE,MAP_SHARED, FrameBufferFD, 0);
+	framebuffer = mmap(NULL, fix_info.line_length * 480, PROT_READ | PROT_WRITE,
+	MAP_SHARED, FrameBufferFD, 0);
 	inputEventsFD = open("/dev/input/event0", O_RDONLY | O_NONBLOCK);
 #ifdef RPiLAB
-	inputJoyFD= open("/dev/input/js0", O_RDONLY | O_NONBLOCK);
+	inputJoyFD = open("/dev/input/js0", O_RDONLY | O_NONBLOCK);
 #else
 	inputJoyFD=0;
 #endif
 	pthread_create(&tID, NULL, TimerThread, NULL);
 	struct timeval tTime;
-	gettimeofday(&tTime,NULL);
-	startTime_ms=tTime.tv_sec*1000+tTime.tv_usec/1000;
+	gettimeofday(&tTime, NULL);
+	startTime_ms = tTime.tv_sec * 1000 + tTime.tv_usec / 1000;
 }
 
-void PrintDiagnosticInfo(){
+void PrintDiagnosticInfo() {
 	struct timeval tTime;
-	gettimeofday(&tTime,NULL);
-	long TimeDiff=(tTime.tv_sec*1000+tTime.tv_usec/1000)-startTime_ms;
-	long actTime=globalTimer_ms;
-	if((frame_count%20)==0) printf("%i:: %li:%li=>%li KEYS: %i, %i, %i, %i, %x\n",frame_count,actTime,TimeDiff,actTime-TimeDiff,getKey(), Jx, Jy,JRz,JoYAct.ButtonStates);
+	gettimeofday(&tTime, NULL);
+	long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+	long actTime = globalTimer_ms;
+	//if((frame_count%20)==0) printf("%i:: %li:%li=>%li KEYS: %i, %i, %i, %i, %x\n",frame_count,actTime,TimeDiff,actTime-TimeDiff,getKey(), Jx, Jy,JRz,JoYAct.ButtonStates);
 }
 
 void UpdateIO() {
@@ -106,42 +137,48 @@ void UpdateIO() {
 	}
 #ifdef RPiLAB
 	struct js_event ev2;
-			while (read(inputJoyFD, &ev2, sizeof ev2) > 0) {
-					if (ev2.type & JS_EVENT_AXIS) {
-						switch (ev2.number) {
+	while (read(inputJoyFD, &ev2, sizeof ev2) > 0) {
+		if (ev2.type & JS_EVENT_AXIS) {
+			switch (ev2.number) {
 
-						case 1:
-							JoYAct.AxisY = ev2.value >> 8;		break;
-						case 2:
-							JoYAct.AxisX = ev2.value >> 8;		break;
-						case 3:
-							JoYAct.AxisZ = ev2.value >> 8;		break;
-						case 4:
-							JoYAct.AxisR = ev2.value >> 8;		break;
-						default:
-							break;
-						}
+			case 1:
+				JoYAct.AxisY = ev2.value >> 8;
+				break;
+			case 2:
+				JoYAct.AxisX = ev2.value >> 8;
+				break;
+			case 3:
+				JoYAct.AxisZ = ev2.value >> 8;
+				break;
+			case 4:
+				JoYAct.AxisR = ev2.value >> 8;
+				break;
+			default:
+				break;
+			}
 
-					}
-					if (ev2.type & JS_EVENT_BUTTON) {
-						if (ev2.value)
-							JoYAct.ButtonStates |= (1 << ev2.number);
-						else
-							JoYAct.ButtonStates &= ~(1 << ev2.number);
-					}
+		}
+		if (ev2.type & JS_EVENT_BUTTON) {
+			if (ev2.value)
+				JoYAct.ButtonStates |= (1 << ev2.number);
+			else
+				JoYAct.ButtonStates &= ~(1 << ev2.number);
+		}
 
-}
+	}
 #endif
 
 }
 
 void ClearScreen() {
 
-	unsigned int bckgmask =getKey()>>2;
+	unsigned int bckgmask = getKey() >> 2;
 
-	int stage_max= -JRz/20;
-	if (stage_max < 1)		stage_max = 1;
-	if (stage_max > 9)		stage_max = 9;
+	int stage_max = -JRz / 20;
+	if (stage_max < 1)
+		stage_max = 1;
+	if (stage_max > 9)
+		stage_max = 9;
 
 	if (JoYAct.ButtonStates & BUTTON_SELECT)
 		stage_max = 24;
@@ -154,41 +191,41 @@ void ClearScreen() {
 	}
 }
 void DrawObjects() {
-		frame_count++;
-		if (getKey() == 75) polozenie--;
-		else if (getKey() == 77) polozenie++;
+	frame_count++;
+	//Drawing and moving platform
+	/*
+	 if (getKey() == 75) polozenie--;
+	 else if (getKey() == 77) polozenie++;
 
-		if (polozenie < 0) polozenie = 0;
-		else if(polozenie > 400) polozenie = 400;
-
-
-			for (int i = 0; i < 50; i++){
-						for (int j = 475; j < 480; j++){
-							int p1 = polozenie + i;
+	 if (polozenie < 0) polozenie = 0;
+	 else if(polozenie > 400) polozenie = 400;
 
 
+	 for (int i = 0; i < 50; i++){
+	 for (int j = 475; j < 480; j++){
+	 int p1 = polozenie + i;
 
-							SetPixel(GRAPH, p1, j, 0xfffff);
-						}
-					}
-		DrawBall(ballx,bally);
-		MoveBall();
+	 SetPixel(GRAPH, p1, j, 0xfffff);
+	 }
+	 }
 
+	 */
 
-
-/*
-	for (int i = 0; i < 100; i++){
-		for (int j = 0; j < 100; j++){
-			int p1 = i + xx;
-			int p2 = j + yy;
-			SetPixel(GRAPH, p1, p2, 0xfffff);
-		}
-	}
-	xx+=dxx;
-	yy+=dyy;
-	if(xx==150 || xx==0)dxx=-dxx;
-	if(yy==100 || yy==0)dyy=-dyy;
-*/
+	//DrawBall(ballx,bally);
+	//MoveBall();
+	/*
+	 for (int i = 0; i < 100; i++){
+	 for (int j = 0; j < 100; j++){
+	 int p1 = i + xx;
+	 int p2 = j + yy;
+	 SetPixel(GRAPH, p1, p2, 0xfffff);
+	 }
+	 }
+	 xx+=dxx;
+	 yy+=dyy;
+	 if(xx==150 || xx==0)dxx=-dxx;
+	 if(yy==100 || yy==0)dyy=-dyy;
+	 */
 
 }
 void DataPrepare() {
@@ -213,32 +250,32 @@ void DataPrepare() {
 	}
 }
 
+/*
+ void DrawBall(int x, int y)
+ {
+ for(int i = 0; i < 10; i++)
+ {
+ for(int j = 0; j < 10; j++)
+ {
+ int p1 = i + x;
+ int p2 = j + y;
 
-void DrawBall(int x, int y)
-{
-	for(int i = 0; i < 10; i++)
-	{
-		for(int j = 0; j < 10; j++)
-		{
-			int p1 = i + x;
-			int p2 = j + y;
+ SetPixel(GRAPH, p1, p2, 0xfffff);
+ }
+ }
 
-			SetPixel(GRAPH, p1, p2, 0xfffff);
-		}
-	}
+ }
 
-}
-
-void MoveBall()
-{
-
-
-	ballx += balldx;
-	bally += balldy;
-
-	if(ballx >= 630 || ballx <= 1) balldx = -balldx;
-	if(bally >= 470 || bally <= 1) balldy = -balldy;
-
-}
+ void MoveBall()
+ {
 
 
+ ballx += balldx;
+ bally += balldy;
+
+ if(ballx >= 630 || ballx <= 1) balldx = -balldx;
+ if(bally >= 470 || bally <= 1) balldy = -balldy;
+
+ }
+
+ */
