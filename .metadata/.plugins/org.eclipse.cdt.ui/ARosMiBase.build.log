@@ -1,14 +1,14 @@
-16:31:08 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+22:00:18 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
 make all 
 'Building file: ../src/main.cpp'
 'Invoking: Cross G++ Compiler'
 x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
 ../src/main.cpp: In function 'void PrintDiagnosticInfo()':
-../src/main.cpp:89:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
-   89 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+../src/main.cpp:155:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  155 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
       |       ^~~~~~~~
-../src/main.cpp:90:7: warning: unused variable 'actTime' [-Wunused-variable]
-   90 |  long actTime = globalTimer_ms;
+../src/main.cpp:156:7: warning: unused variable 'actTime' [-Wunused-variable]
+  156 |  long actTime = globalTimer_ms;
       |       ^~~~~~~
 'Finished building: ../src/main.cpp'
 ' '
@@ -18,5 +18,5 @@ x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/ut
 'Finished building target: ARosMiBase'
 ' '
 
-16:31:14 Build Finished. 0 errors, 2 warnings. (took 6s.309ms)
+22:00:24 Build Finished. 0 errors, 2 warnings. (took 6s.76ms)
 

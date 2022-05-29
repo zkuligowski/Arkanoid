@@ -2,23 +2,35 @@
 #include "peripherals.h"
 #include "utilities.h"
 
+#include <list>
+
 #define RPiLAB
+using namespace std;
 
 int main(int argc, char *argv[]) {
 	SystemInit();
 	DataPrepare();
 
 	Ball ball;
-	Platform platform;
-	Block block1, block2, block3;
+	Paddle paddle;
+	Block block1(100, 100, 50, 50);
+	Block block2(200, 100, 50, 50);
+	Block block3(300, 100, 50, 50);
+
+
+	list<Block> block_list;
+
+	block_list.push_back(block1);
+	block_list.push_back(block2);
+	block_list.push_back(block3);
 
 	while (1) {
 		UpdateIO();
 		PrintDiagnosticInfo();
 		ClearScreen();
 		//background
-		for (int x = 1; x <= 639; x++) {
-			for (int y = 1; y <= 479; y++) {
+		for (int x = 0; x <= 639; x++) {
+			for (int y = 0; y <= 479; y++) {
 
 				SetPixel(GRAPH, x, y, 0x0000ff);
 			}
@@ -26,23 +38,77 @@ int main(int argc, char *argv[]) {
 
 		ball.DrawBall();
 		ball.MoveBall();
-		platform.DrawPlatform();
-		block1.DrawBlock(100, 100, 50, 20);
-		block2.DrawBlock(200, 100, 50, 20);
-		block3.DrawBlock(300, 100, 50, 20);
+		paddle.MovePaddle();
+		paddle.DrawPaddle();
+		block1.DrawBlock();
+		block2.DrawBlock();
+		block3.DrawBlock();
 
 
-		if((ball.getY() + 10) ==  480)
-			printf("%d\n", 1);
+		if((ball.getY() + 10) == 470)
+		{
+			//int temp_paddle_width = 0;
+
+			if(ball.getX() >= paddle.getPosition() - ball.getWidth() && ball.getX() <= paddle.getPosition() + paddle.getWidth())
+			{
+				ball.setDy(-(ball.getDy()));
+			}
+
+			/*
+			for(int i = 0; i < paddle.getWidth(); i++)
+			{
+
+				if(ball.getX() == paddle.getPosition() + temp_paddle_width)
+				{
+
+				}
+				else
+				{
+					temp_paddle_width++;
+				}
+			}
+			*/
+		}
+
+		//THIS IS TEMPORARY
+		//ONLY TO PREVENT FROM CRASH PROGRAM
+		else if((ball.getY() + 10) > 480)
+		{
+			ball.setX(50);
+			ball.setY(50);
+		}
+
+		//bouncing off the blocks
+
+		for (auto const& block_index : block_list) {
 
 
-
-
-		for (int i = 300; i < 350; i++) {
-			for (int j = 300; j < 350; j++) {
-				SetPixel(GRAPH, i, j, 0xff);
+			if(ball.getY() >= block_index.getY() && ball.getY() <= block_index.getBottom())
+			{
+				if(ball.getX() == block_index.getRight())
+				{
+					ball.setDy(-(ball.getDy()));
+				}
+				else if((ball.getX() + ball.getWidth()) == block_index.getX())
+				{
+					ball.setDy(-(ball.getDy()));
+				}
+			}
+			else if(ball.getX() >= block_index.getX() && ball.getX() <= block_index.getRight())
+			{
+				if(ball.getY() == block_index.getBottom())
+				{
+					ball.setDx(-(ball.getDx()));
+				}
+				else if(ball.getY() + ball.getHeight() == block_index.getY())
+				{
+					ball.setDx(-(ball.getDx()));
+				}
 			}
 		}
+
+
+
 
 		//DrawObjects();
 		usleep(1000);
@@ -192,40 +258,6 @@ void ClearScreen() {
 }
 void DrawObjects() {
 	frame_count++;
-	//Drawing and moving platform
-	/*
-	 if (getKey() == 75) polozenie--;
-	 else if (getKey() == 77) polozenie++;
-
-	 if (polozenie < 0) polozenie = 0;
-	 else if(polozenie > 400) polozenie = 400;
-
-
-	 for (int i = 0; i < 50; i++){
-	 for (int j = 475; j < 480; j++){
-	 int p1 = polozenie + i;
-
-	 SetPixel(GRAPH, p1, j, 0xfffff);
-	 }
-	 }
-
-	 */
-
-	//DrawBall(ballx,bally);
-	//MoveBall();
-	/*
-	 for (int i = 0; i < 100; i++){
-	 for (int j = 0; j < 100; j++){
-	 int p1 = i + xx;
-	 int p2 = j + yy;
-	 SetPixel(GRAPH, p1, p2, 0xfffff);
-	 }
-	 }
-	 xx+=dxx;
-	 yy+=dyy;
-	 if(xx==150 || xx==0)dxx=-dxx;
-	 if(yy==100 || yy==0)dyy=-dyy;
-	 */
 
 }
 void DataPrepare() {
@@ -249,33 +281,3 @@ void DataPrepare() {
 		} while ((abs(dy[a]) + abs(dx[a])) <= 4);
 	}
 }
-
-/*
- void DrawBall(int x, int y)
- {
- for(int i = 0; i < 10; i++)
- {
- for(int j = 0; j < 10; j++)
- {
- int p1 = i + x;
- int p2 = j + y;
-
- SetPixel(GRAPH, p1, p2, 0xfffff);
- }
- }
-
- }
-
- void MoveBall()
- {
-
-
- ballx += balldx;
- bally += balldy;
-
- if(ballx >= 630 || ballx <= 1) balldx = -balldx;
- if(bally >= 470 || bally <= 1) balldy = -balldy;
-
- }
-
- */

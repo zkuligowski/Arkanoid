@@ -5927,3 +5927,937 @@ x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d
 x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
 'Finished building target: ARosMiBase'
 ' '
+16:45:09 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:89:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+   89 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:90:7: warning: unused variable 'actTime' [-Wunused-variable]
+   90 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+17:06:04 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:12:2: error: 'Platform' was not declared in this scope
+   12 |  Platform platform;
+      |  ^~~~~~~~
+../src/main.cpp:29:3: error: 'platform' was not declared in this scope
+   29 |   platform.DrawPlatform();
+      |   ^~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:89:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+   89 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:90:7: warning: unused variable 'actTime' [-Wunused-variable]
+   90 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+make: *** [src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+17:06:23 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:95:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+   95 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:96:7: warning: unused variable 'actTime' [-Wunused-variable]
+   96 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+17:13:11 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+make: Nothing to be done for `all'.
+17:13:25 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:99:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+   99 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:100:7: warning: unused variable 'actTime' [-Wunused-variable]
+  100 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+17:15:44 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:39:44: error: array must be initialized with a brace-enclosed initializer
+   39 |    int temp_tab[50] = paddle.getPositionTab();
+      |                       ~~~~~~~~~~~~~~~~~~~~~^~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:101:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  101 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:102:7: warning: unused variable 'actTime' [-Wunused-variable]
+  102 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+make: *** [src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+17:28:20 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:39:44: error: array must be initialized with a brace-enclosed initializer
+   39 |    int temp_tab[50] = paddle.getPositionTab();
+      |                       ~~~~~~~~~~~~~~~~~~~~~^~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:101:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  101 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:102:7: warning: unused variable 'actTime' [-Wunused-variable]
+  102 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+make: *** [src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+17:28:29 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:110:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  110 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:111:7: warning: unused variable 'actTime' [-Wunused-variable]
+  111 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+17:33:27 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:112:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  112 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:113:7: warning: unused variable 'actTime' [-Wunused-variable]
+  113 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+17:37:26 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:112:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  112 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:113:7: warning: unused variable 'actTime' [-Wunused-variable]
+  113 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+17:39:37 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:112:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  112 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:113:7: warning: unused variable 'actTime' [-Wunused-variable]
+  113 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+17:43:33 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:112:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  112 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:113:7: warning: unused variable 'actTime' [-Wunused-variable]
+  113 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+17:46:47 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:112:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  112 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:113:7: warning: unused variable 'actTime' [-Wunused-variable]
+  113 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+17:48:51 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:112:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  112 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:113:7: warning: unused variable 'actTime' [-Wunused-variable]
+  113 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+18:01:15 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+make: Nothing to be done for `all'.
+18:01:18 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:13:17: error: conversion from 'Block*' to non-scalar type 'Block' requested
+   13 |  Block block1 = new Block(100,100,50,20);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:113:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  113 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:114:7: warning: unused variable 'actTime' [-Wunused-variable]
+  114 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+make: *** [src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:04:02 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:13:17: error: conversion from 'Block*' to non-scalar type 'Block' requested
+   13 |  Block block1 = new Block(100,100,50,20);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:113:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  113 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:114:7: warning: unused variable 'actTime' [-Wunused-variable]
+  114 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+make: *** [src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:04:08 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:113:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  113 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:114:7: warning: unused variable 'actTime' [-Wunused-variable]
+  114 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+In file included from ../src/main.cpp:1:
+../src/main.h: In member function 'void Block::DrawBlock()':
+../src/main.h:242:12: warning: 'x' is used uninitialized in this function [-Wuninitialized]
+  242 |   for (int x = x; x < p1; x++) {
+      |            ^
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+18:05:11 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:113:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  113 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:114:7: warning: unused variable 'actTime' [-Wunused-variable]
+  114 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+18:10:41 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:107:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  107 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:108:7: warning: unused variable 'actTime' [-Wunused-variable]
+  108 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+18:12:40 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+make: Nothing to be done for `all'.
+18:13:24 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+make: Nothing to be done for `all'.
+18:13:27 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:19:2: error: 'list' was not declared in this scope; did you mean 'std::__cxx11::list'?
+   19 |  list<Block> block_list;
+      |  ^~~~
+      |  std::__cxx11::list
+In file included from d:\osm\smartdev.v.0.12\smartdev\gcc_linux_abi_x86_64\x86_64-linux-gnu\include\c++\9/list:63,
+                 from ../src/main.cpp:5:
+d:\osm\smartdev.v.0.12\smartdev\gcc_linux_abi_x86_64\x86_64-linux-gnu\include\c++\9/bits/stl_list.h:552:11: note: 'std::__cxx11::list' declared here
+  552 |     class list : protected _List_base<_Tp, _Alloc>
+      |           ^~~~
+../src/main.cpp:19:12: error: expected primary-expression before '>' token
+   19 |  list<Block> block_list;
+      |            ^
+../src/main.cpp:19:14: error: 'block_list' was not declared in this scope; did you mean 'clock_t'?
+   19 |  list<Block> block_list;
+      |              ^~~~~~~~~~
+      |              clock_t
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:111:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  111 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:112:7: warning: unused variable 'actTime' [-Wunused-variable]
+  112 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+make: *** [src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:15:11 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:19:2: error: 'list' was not declared in this scope; did you mean 'std::__cxx11::list'?
+   19 |  list<Block> block_list;
+      |  ^~~~
+      |  std::__cxx11::list
+In file included from d:\osm\smartdev.v.0.12\smartdev\gcc_linux_abi_x86_64\x86_64-linux-gnu\include\c++\9/list:63,
+                 from ../src/main.cpp:5:
+d:\osm\smartdev.v.0.12\smartdev\gcc_linux_abi_x86_64\x86_64-linux-gnu\include\c++\9/bits/stl_list.h:552:11: note: 'std::__cxx11::list' declared here
+  552 |     class list : protected _List_base<_Tp, _Alloc>
+      |           ^~~~
+../src/main.cpp:19:12: error: expected primary-expression before '>' token
+   19 |  list<Block> block_list;
+      |            ^
+../src/main.cpp:19:14: error: 'block_list' was not declared in this scope; did you mean 'clock_t'?
+   19 |  list<Block> block_list;
+      |              ^~~~~~~~~~
+      |              clock_t
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:111:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  111 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:112:7: warning: unused variable 'actTime' [-Wunused-variable]
+  112 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+make: *** [src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:15:15 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:19:2: error: 'list' was not declared in this scope; did you mean 'std::__cxx11::list'?
+   19 |  list<int> c1;
+      |  ^~~~
+      |  std::__cxx11::list
+In file included from d:\osm\smartdev.v.0.12\smartdev\gcc_linux_abi_x86_64\x86_64-linux-gnu\include\c++\9/list:63,
+                 from ../src/main.cpp:5:
+d:\osm\smartdev.v.0.12\smartdev\gcc_linux_abi_x86_64\x86_64-linux-gnu\include\c++\9/bits/stl_list.h:552:11: note: 'std::__cxx11::list' declared here
+  552 |     class list : protected _List_base<_Tp, _Alloc>
+      |           ^~~~
+../src/main.cpp:19:7: error: expected primary-expression before 'int'
+   19 |  list<int> c1;
+      |       ^~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:111:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  111 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:112:7: warning: unused variable 'actTime' [-Wunused-variable]
+  112 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+make: *** [src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:16:18 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:112:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  112 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:113:7: warning: unused variable 'actTime' [-Wunused-variable]
+  113 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+18:16:32 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+make: Nothing to be done for `all'.
+18:18:25 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:112:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  112 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:113:7: warning: unused variable 'actTime' [-Wunused-variable]
+  113 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+18:19:12 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:113:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  113 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:114:7: warning: unused variable 'actTime' [-Wunused-variable]
+  114 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+18:21:24 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:115:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  115 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:116:7: warning: unused variable 'actTime' [-Wunused-variable]
+  116 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+18:27:45 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+make: Nothing to be done for `all'.
+18:27:48 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:47:3: error: 'check_ball_paddle_collision' was not declared in this scope
+   47 |   check_ball_paddle_collision(ball,paddle);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:125:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  125 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:126:7: warning: unused variable 'actTime' [-Wunused-variable]
+  126 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+make: *** [src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:28:41 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+In file included from ../src/main.cpp:1:
+../src/main.h:59:34: error: variable or field 'check_ball_paddle_collision' declared void
+   59 | void check_ball_paddle_collision(Ball ball, Paddle paddle)
+      |                                  ^~~~
+../src/main.h:59:34: error: 'Ball' was not declared in this scope
+../src/main.h:59:45: error: 'Paddle' was not declared in this scope
+   59 | void check_ball_paddle_collision(Ball ball, Paddle paddle)
+      |                                             ^~~~~~
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:14:2: error: 'Ball' was not declared in this scope
+   14 |  Ball ball;
+      |  ^~~~
+../src/main.cpp:39:3: error: 'ball' was not declared in this scope
+   39 |   ball.DrawBall();
+      |   ^~~~
+../src/main.cpp:47:3: error: 'check_ball_paddle_collision' was not declared in this scope
+   47 |   check_ball_paddle_collision(ball,paddle);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.cpp: At global scope:
+../src/main.cpp:59:34: error: variable or field 'check_ball_paddle_collision' declared void
+   59 | void check_ball_paddle_collision(Ball ball, Paddle paddle)
+      |                                  ^~~~
+../src/main.cpp:59:34: error: 'Ball' was not declared in this scope
+../src/main.cpp:59:52: error: expected primary-expression before 'paddle'
+   59 | void check_ball_paddle_collision(Ball ball, Paddle paddle)
+      |                                                    ^~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:125:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  125 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:126:7: warning: unused variable 'actTime' [-Wunused-variable]
+  126 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+make: *** [src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:28:57 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+In file included from ../src/main.cpp:1:
+../src/main.h:59:34: error: variable or field 'check_ball_paddle_collision' declared void
+   59 | void check_ball_paddle_collision(Ball ball, Paddle paddle);
+      |                                  ^~~~
+../src/main.h:59:34: error: 'Ball' was not declared in this scope
+../src/main.h:59:45: error: 'Paddle' was not declared in this scope
+   59 | void check_ball_paddle_collision(Ball ball, Paddle paddle);
+      |                                             ^~~~~~
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:47:3: error: 'check_ball_paddle_collision' was not declared in this scope
+   47 |   check_ball_paddle_collision(ball,paddle);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:125:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  125 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:126:7: warning: unused variable 'actTime' [-Wunused-variable]
+  126 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+make: *** [src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:31:42 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:117:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  117 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:118:7: warning: unused variable 'actTime' [-Wunused-variable]
+  118 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+18:35:50 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+make: Nothing to be done for `all'.
+18:35:55 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:117:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  117 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:118:7: warning: unused variable 'actTime' [-Wunused-variable]
+  118 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+18:36:31 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+make: Nothing to be done for `all'.
+18:46:58 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:117:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  117 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:118:7: warning: unused variable 'actTime' [-Wunused-variable]
+  118 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+19:03:22 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+make: Nothing to be done for `all'.
+19:32:49 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:117:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  117 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:118:7: warning: unused variable 'actTime' [-Wunused-variable]
+  118 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+19:36:20 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:117:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  117 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:118:7: warning: unused variable 'actTime' [-Wunused-variable]
+  118 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+19:42:21 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+make: Nothing to be done for `all'.
+19:42:29 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:50:8: warning: unused variable 'temp_paddle_width' [-Wunused-variable]
+   50 |    int temp_paddle_width = 0;
+      |        ^~~~~~~~~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:124:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  124 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:125:7: warning: unused variable 'actTime' [-Wunused-variable]
+  125 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+19:43:24 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:124:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  124 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:125:7: warning: unused variable 'actTime' [-Wunused-variable]
+  125 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+19:45:34 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:124:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  124 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:125:7: warning: unused variable 'actTime' [-Wunused-variable]
+  125 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+19:48:29 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:124:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  124 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:125:7: warning: unused variable 'actTime' [-Wunused-variable]
+  125 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+21:36:05 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:148:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  148 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:149:7: warning: unused variable 'actTime' [-Wunused-variable]
+  149 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+21:42:22 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+make: Nothing to be done for `all'.
+21:42:28 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:85:32: error: no match for 'operator[]' (operand types are 'std::__cxx11::list<Block>' and 'const Block')
+   85 |    if(ball.getY() >= block_list[i].getY() && ball.getY() <= block1.getBottom())
+      |                                ^
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:154:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  154 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:155:7: warning: unused variable 'actTime' [-Wunused-variable]
+  155 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+make: *** [src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+21:45:03 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:155:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  155 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:156:7: warning: unused variable 'actTime' [-Wunused-variable]
+  156 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+21:46:14 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:155:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  155 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:156:7: warning: unused variable 'actTime' [-Wunused-variable]
+  156 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+21:54:38 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:155:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  155 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:156:7: warning: unused variable 'actTime' [-Wunused-variable]
+  156 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+21:59:20 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:155:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  155 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:156:7: warning: unused variable 'actTime' [-Wunused-variable]
+  156 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+22:00:18 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:155:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  155 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:156:7: warning: unused variable 'actTime' [-Wunused-variable]
+  156 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
