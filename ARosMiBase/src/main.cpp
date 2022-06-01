@@ -11,107 +11,110 @@ int main(int argc, char *argv[]) {
 	SystemInit();
 	DataPrepare();
 
+	Game game;
+	game.StartGame();
+
 	Ball ball;
 	Paddle paddle;
-	Block block1(100, 100, 50, 50);
-	Block block2(200, 100, 50, 50);
-	Block block3(300, 100, 50, 50);
-
+	Block block1(100, 50, 50, 50, 1);
+	Block block2(160, 80, 50, 50, 1);
+	Block block3(220, 100, 50, 50, 1);
+	Block block4(100, 120, 50, 50, 1);
+	Block block5(160, 150, 50, 50, 1);
+	Block block6(220, 180, 50, 50, 1);
+	Block block7(100, 210, 50, 50, 1);
+	Block block8(160, 240, 50, 50, 1);
+	Block block9(220, 270, 50, 50, 1);
 
 	list<Block> block_list;
 
 	block_list.push_back(block1);
 	block_list.push_back(block2);
 	block_list.push_back(block3);
+	block_list.push_back(block4);
+	block_list.push_back(block5);
+	block_list.push_back(block6);
+	block_list.push_back(block7);
+	block_list.push_back(block8);
+	block_list.push_back(block9);
 
 	while (1) {
 		UpdateIO();
 		PrintDiagnosticInfo();
 		ClearScreen();
 		//background
-		for (int x = 0; x <= 639; x++) {
-			for (int y = 0; y <= 479; y++) {
+		//for (int x = 0; x <= 639; x++) {
+		//for (int y = 0; y <= 479; y++) {
 
-				SetPixel(GRAPH, x, y, 0x0000ff);
-			}
+		//SetPixel(GRAPH, x, y, 0x0000ff);
+		//}
+		//}
+
+		//printf("%d\n", game1.getLives());
+
+		if (getKey() == 72) {
+			game.StartGame();
 		}
 
-		ball.DrawBall();
-		ball.MoveBall();
 		paddle.MovePaddle();
 		paddle.DrawPaddle();
-		block1.DrawBlock();
-		block2.DrawBlock();
-		block3.DrawBlock();
+		if (game.isGameover() == false) {
+			ball.DrawBall();
+			ball.MoveBall();
+		}
 
-
-		if((ball.getY() + 10) == 470)
-		{
-			//int temp_paddle_width = 0;
-
-			if(ball.getX() >= paddle.getPosition() - ball.getWidth() && ball.getX() <= paddle.getPosition() + paddle.getWidth())
-			{
+		if ((ball.getY() + 10) == 470) {
+			if (ball.getX() >= paddle.getPosition() - ball.getWidth()
+					&& ball.getX()
+							<= paddle.getPosition() + paddle.getWidth()) {
 				ball.setDy(-(ball.getDy()));
 			}
 
-			/*
-			for(int i = 0; i < paddle.getWidth(); i++)
-			{
-
-				if(ball.getX() == paddle.getPosition() + temp_paddle_width)
-				{
-
-				}
-				else
-				{
-					temp_paddle_width++;
-				}
-			}
-			*/
 		}
 
 		//THIS IS TEMPORARY
 		//ONLY TO PREVENT FROM CRASH PROGRAM
-		else if((ball.getY() + 10) > 480)
-		{
+		else if ((ball.getY() + 10) > 480) {
 			ball.setX(50);
 			ball.setY(50);
+			game.SubstractLive();
+			if (game.getLives() == 0)
+				game.GameOver();
 		}
 
-		//bouncing off the blocks
+		//Draw the blocks
+		//and bouncing off the blocks
+		for (auto &block_index : block_list) {
 
-		for (auto const& block_index : block_list) {
+			if (block_index.getLive() >= 1) {
+				block_index.DrawBlock();
 
-
-			if(ball.getY() >= block_index.getY() && ball.getY() <= block_index.getBottom())
-			{
-				if(ball.getX() == block_index.getRight())
-				{
-					ball.setDy(-(ball.getDy()));
+				if (ball.getBottom() >= block_index.getY()
+						&& ball.getY() <= block_index.getBottom()) {
+					if (ball.getX() == block_index.getRight()) {
+						ball.setDx(-(ball.getDx()));
+						block_index.SubstractLive();
+					} else if (ball.getRight() == block_index.getX()) {
+						ball.setDx(-(ball.getDx()));
+						block_index.SubstractLive();
+					}
 				}
-				else if((ball.getX() + ball.getWidth()) == block_index.getX())
-				{
-					ball.setDy(-(ball.getDy()));
+
+				if (ball.getRight() > block_index.getX()
+						&& ball.getX() < block_index.getRight()) {
+					if (ball.getY() == block_index.getBottom()) {
+						ball.setDy(-(ball.getDy()));
+						block_index.SubstractLive();
+					} else if (ball.getBottom() == block_index.getY()) {
+						ball.setDy(-(ball.getDy()));
+						block_index.SubstractLive();
+					}
 				}
 			}
-			else if(ball.getX() >= block_index.getX() && ball.getX() <= block_index.getRight())
-			{
-				if(ball.getY() == block_index.getBottom())
-				{
-					ball.setDx(-(ball.getDx()));
-				}
-				else if(ball.getY() + ball.getHeight() == block_index.getY())
-				{
-					ball.setDx(-(ball.getDx()));
-				}
-			}
+
 		}
 
-
-
-
-		//DrawObjects();
-		usleep(1000);
+		usleep(10000);
 	}
 }
 

@@ -57,17 +57,67 @@ long startTime_ms;
 int frame_count = 0;
 
 
+class Game
+{
+	short int lives;
+	bool gameover = false;
+
+public:
+	void StartGame()
+	{
+		this->lives = 3;
+		this->gameover = false;
+
+	}
+
+	void AddLive()
+	{
+		this->lives++;
+	}
+
+	void SubstractLive()
+	{
+		this->lives--;
+	}
+
+	void GameOver()
+	{
+		printf("xD");
+		printf("\nno i chuj przegrales!");
+		this->gameover = true;
+	}
+
+	short int getLives() const {
+		return lives;
+	}
+
+	void setLives(short int lives) {
+		this->lives = lives;
+	}
+
+	bool isGameover() const {
+		return gameover;
+	}
+
+	void setGameover(bool gameover) {
+		this->gameover = gameover;
+	}
+};
+
 
 //class with ball
 class Ball {
-	short int dx = 1;
-	short int dy = 1;
+	short int dx = 2;
+	short int dy = 2;
 	short int x = 50;
 	short int y = 50;
 	short int width = 10;
 	short int height = 10;
+	short int Bottom;
+	short int Right;
 
 public:
+
 	void MoveBall() {
 		x += dx;
 		y += dy;
@@ -77,6 +127,9 @@ public:
 
 		if (y <= 1)
 			dy = -dy;
+
+		Bottom = y + height;
+		Right = x + width;
 	}
 
 public:
@@ -87,7 +140,7 @@ public:
 				int p1 = i + x;
 				int p2 = j + y;
 
-				SetPixel(GRAPH, p1, p2, 0xfffff);
+				SetPixel(GRAPH, p1, p2, 0xff0000);
 			}
 		}
 	}
@@ -138,6 +191,22 @@ public:
 
 	void setWidth(short int width = 10) {
 		this->width = width;
+	}
+
+	short int getBottom() const {
+		return Bottom;
+	}
+
+	void setBottom(short int bottom) {
+		Bottom = bottom;
+	}
+
+	short int getRight() const {
+		return Right;
+	}
+
+	void setRight(short int right) {
+		Right = right;
 	}
 };
 
@@ -226,12 +295,13 @@ class Block {
 	int width;
 	short int right;
 	short int bottom;
+	short int live;
 
 public:
 
 	Block();
 
-	Block(int block_x, int block_y, int block_length, int block_width)
+	Block(int block_x, int block_y, int block_length, int block_width, short int live)
 	{
 		this->x = block_x;
 		this->y = block_y;
@@ -239,6 +309,7 @@ public:
 		this->width = block_width;
 		this->right = block_x + block_width;
 		this->bottom = block_y + block_length;
+		this->live = live;
 	}
 
 	void DrawBlock() {
@@ -250,6 +321,11 @@ public:
 				SetPixel(GRAPH, x, y, 0xfffff);
 			}
 		}
+	}
+
+	void SubstractLive()
+	{
+		this->live--;
 	}
 
 	short int getBottom() const {
@@ -298,6 +374,14 @@ public:
 
 	void setY(short int y) {
 		this->y = y;
+	}
+
+	short int getLive() const {
+		return live;
+	}
+
+	void setLive(short int live) {
+		this->live = live;
 	}
 };
 
