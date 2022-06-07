@@ -1,0 +1,38 @@
+1kolumna
+Tab 15
+Block 69
+/ 98
+* 55
+Backspace 14
+7 71
+8 72 
+9 73 
+- 74 
+4 75
+5 76
+6 77
++ 78
+1 79 
+2 80
+3 81
+0 82
+Space 57
+, 83 
+Enter 76
+
+4 kolumna (pad)
+1 1
+2 2
+3 4
+4 8
+R1 20
+R2 80
+L1 10
+L2 40
+
+Lewy analog 2 i 3 kolumna
+2 kol pozioma
+3 kol pionowa
+
+Prawy analog
+4 kolumna pionowa

@@ -1,6 +1,22 @@
-01:31:26 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+12:29:49 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
 make all 
-make: Nothing to be done for `all'.
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:277:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  277 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:278:7: warning: unused variable 'actTime' [-Wunused-variable]
+  278 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
 
-01:31:26 Build Finished. 0 errors, 0 warnings. (took 338ms)
+12:29:59 Build Finished. 0 errors, 2 warnings. (took 10s.330ms)
 
