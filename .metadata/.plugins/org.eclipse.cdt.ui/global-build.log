@@ -12679,3 +12679,2052 @@ x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d
 x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
 'Finished building target: ARosMiBase'
 ' '
+12:43:41 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:266:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  266 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:267:7: warning: unused variable 'actTime' [-Wunused-variable]
+  267 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+12:45:30 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:263:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  263 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:264:7: warning: unused variable 'actTime' [-Wunused-variable]
+  264 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+13:12:07 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:303:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  303 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:304:7: warning: unused variable 'actTime' [-Wunused-variable]
+  304 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+d:/osm/smartdev.v.0.12/smartdev/gcc_linux_abi_x86_64/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/bin/ld.exe: ./src/main.o: in function `main':
+D:\OSM\ARKANOID\Arkanoid\ARosMiBase\SIMOUT/../src/main.cpp:29: undefined reference to `Block::Block()'
+collect2.exe: error: ld returned 1 exit status
+make: *** [ARosMiBase] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+13:12:46 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:29:17: error: conversion from 'Block*' to non-scalar type 'Block' requested
+   29 |  Block blocks = new Block[10];
+      |                 ^~~~~~~~~~~~~
+../src/main.cpp:31:8: error: no match for 'operator[]' (operand types are 'Block' and 'int')
+   31 |  blocks[0].setX(30);
+      |        ^
+../src/main.cpp:32:8: error: no match for 'operator[]' (operand types are 'Block' and 'int')
+   32 |  blocks[0].setY(180);
+      |        ^
+../src/main.cpp:33:8: error: no match for 'operator[]' (operand types are 'Block' and 'int')
+   33 |  blocks[0].setLength(20);
+      |        ^
+../src/main.cpp:34:8: error: no match for 'operator[]' (operand types are 'Block' and 'int')
+   34 |  blocks[0].setWidth(30);
+      |        ^
+../src/main.cpp:35:8: error: no match for 'operator[]' (operand types are 'Block' and 'int')
+   35 |  blocks[0].setLive(3);
+      |        ^
+../src/main.cpp:36:8: error: no match for 'operator[]' (operand types are 'Block' and 'int')
+   36 |  blocks[0].setColour(1);
+      |        ^
+../src/main.cpp:37:8: error: no match for 'operator[]' (operand types are 'Block' and 'int')
+   37 |  blocks[0].setCanDrop(true);
+      |        ^
+../src/main.cpp:76:29: error: no match for 'operator[]' (operand types are 'Block' and 'int')
+   76 |  block_list.push_back(blocks[0]);
+      |                             ^
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:303:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  303 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:304:7: warning: unused variable 'actTime' [-Wunused-variable]
+  304 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+make: *** [src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+13:13:17 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:303:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  303 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:304:7: warning: unused variable 'actTime' [-Wunused-variable]
+  304 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+d:/osm/smartdev.v.0.12/smartdev/gcc_linux_abi_x86_64/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/bin/ld.exe: ./src/main.o: in function `main':
+D:\OSM\ARKANOID\Arkanoid\ARosMiBase\SIMOUT/../src/main.cpp:29: undefined reference to `Block::Block()'
+collect2.exe: error: ld returned 1 exit status
+make: *** [ARosMiBase] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+13:14:30 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:226:44: error: no matching function for call to 'Block::Block(int, int, int, int, int, int, bool)'
+  226 |    Block block1(100, 50, 15, 50, 3, 1, true);
+      |                                            ^
+In file included from ../src/main.cpp:6:
+../src/Block.h:29:2: note: candidate: 'Block::Block()'
+   29 |  Block();
+      |  ^~~~~
+../src/Block.h:29:2: note:   candidate expects 0 arguments, 7 provided
+../src/Block.h:15:7: note: candidate: 'constexpr Block::Block(const Block&)'
+   15 | class Block {
+      |       ^~~~~
+../src/Block.h:15:7: note:   candidate expects 1 argument, 7 provided
+../src/Block.h:15:7: note: candidate: 'constexpr Block::Block(Block&&)'
+../src/Block.h:15:7: note:   candidate expects 1 argument, 7 provided
+../src/main.cpp:227:44: error: no matching function for call to 'Block::Block(int, int, int, int, int, int, bool)'
+  227 |    Block block2(160, 80, 15, 50, 1, 3, true);
+      |                                            ^
+In file included from ../src/main.cpp:6:
+../src/Block.h:29:2: note: candidate: 'Block::Block()'
+   29 |  Block();
+      |  ^~~~~
+../src/Block.h:29:2: note:   candidate expects 0 arguments, 7 provided
+../src/Block.h:15:7: note: candidate: 'constexpr Block::Block(const Block&)'
+   15 | class Block {
+      |       ^~~~~
+../src/Block.h:15:7: note:   candidate expects 1 argument, 7 provided
+../src/Block.h:15:7: note: candidate: 'constexpr Block::Block(Block&&)'
+../src/Block.h:15:7: note:   candidate expects 1 argument, 7 provided
+../src/main.cpp:228:44: error: no matching function for call to 'Block::Block(int, int, int, int, int, int, bool)'
+  228 |    Block block3(220, 100, 15, 50, 3, 1,true);
+      |                                            ^
+In file included from ../src/main.cpp:6:
+../src/Block.h:29:2: note: candidate: 'Block::Block()'
+   29 |  Block();
+      |  ^~~~~
+../src/Block.h:29:2: note:   candidate expects 0 arguments, 7 provided
+../src/Block.h:15:7: note: candidate: 'constexpr Block::Block(const Block&)'
+   15 | class Block {
+      |       ^~~~~
+../src/Block.h:15:7: note:   candidate expects 1 argument, 7 provided
+../src/Block.h:15:7: note: candidate: 'constexpr Block::Block(Block&&)'
+../src/Block.h:15:7: note:   candidate expects 1 argument, 7 provided
+../src/main.cpp:229:44: error: no matching function for call to 'Block::Block(int, int, int, int, int, int, bool)'
+  229 |    Block block4(100, 120, 15, 50, 2, 2,true);
+      |                                            ^
+In file included from ../src/main.cpp:6:
+../src/Block.h:29:2: note: candidate: 'Block::Block()'
+   29 |  Block();
+      |  ^~~~~
+../src/Block.h:29:2: note:   candidate expects 0 arguments, 7 provided
+../src/Block.h:15:7: note: candidate: 'constexpr Block::Block(const Block&)'
+   15 | class Block {
+      |       ^~~~~
+../src/Block.h:15:7: note:   candidate expects 1 argument, 7 provided
+../src/Block.h:15:7: note: candidate: 'constexpr Block::Block(Block&&)'
+../src/Block.h:15:7: note:   candidate expects 1 argument, 7 provided
+../src/main.cpp:230:44: error: no matching function for call to 'Block::Block(int, int, int, int, int, int, bool)'
+  230 |    Block block5(160, 150, 15, 50, 3, 1,true);
+      |                                            ^
+In file included from ../src/main.cpp:6:
+../src/Block.h:29:2: note: candidate: 'Block::Block()'
+   29 |  Block();
+      |  ^~~~~
+../src/Block.h:29:2: note:   candidate expects 0 arguments, 7 provided
+../src/Block.h:15:7: note: candidate: 'constexpr Block::Block(const Block&)'
+   15 | class Block {
+      |       ^~~~~
+../src/Block.h:15:7: note:   candidate expects 1 argument, 7 provided
+../src/Block.h:15:7: note: candidate: 'constexpr Block::Block(Block&&)'
+../src/Block.h:15:7: note:   candidate expects 1 argument, 7 provided
+../src/main.cpp:231:44: error: no matching function for call to 'Block::Block(int, int, int, int, int, int, bool)'
+  231 |    Block block6(220, 180, 15, 50, 2, 2,true);
+      |                                            ^
+In file included from ../src/main.cpp:6:
+../src/Block.h:29:2: note: candidate: 'Block::Block()'
+   29 |  Block();
+      |  ^~~~~
+../src/Block.h:29:2: note:   candidate expects 0 arguments, 7 provided
+../src/Block.h:15:7: note: candidate: 'constexpr Block::Block(const Block&)'
+   15 | class Block {
+      |       ^~~~~
+../src/Block.h:15:7: note:   candidate expects 1 argument, 7 provided
+../src/Block.h:15:7: note: candidate: 'constexpr Block::Block(Block&&)'
+../src/Block.h:15:7: note:   candidate expects 1 argument, 7 provided
+../src/main.cpp:232:44: error: no matching function for call to 'Block::Block(int, int, int, int, int, int, bool)'
+  232 |    Block block7(100, 210, 15, 50, 1, 3,true);
+      |                                            ^
+In file included from ../src/main.cpp:6:
+../src/Block.h:29:2: note: candidate: 'Block::Block()'
+   29 |  Block();
+      |  ^~~~~
+../src/Block.h:29:2: note:   candidate expects 0 arguments, 7 provided
+../src/Block.h:15:7: note: candidate: 'constexpr Block::Block(const Block&)'
+   15 | class Block {
+      |       ^~~~~
+../src/Block.h:15:7: note:   candidate expects 1 argument, 7 provided
+../src/Block.h:15:7: note: candidate: 'constexpr Block::Block(Block&&)'
+../src/Block.h:15:7: note:   candidate expects 1 argument, 7 provided
+../src/main.cpp:233:44: error: no matching function for call to 'Block::Block(int, int, int, int, int, int, bool)'
+  233 |    Block block8(160, 240, 15, 50, 2, 2,true);
+      |                                            ^
+In file included from ../src/main.cpp:6:
+../src/Block.h:29:2: note: candidate: 'Block::Block()'
+   29 |  Block();
+      |  ^~~~~
+../src/Block.h:29:2: note:   candidate expects 0 arguments, 7 provided
+../src/Block.h:15:7: note: candidate: 'constexpr Block::Block(const Block&)'
+   15 | class Block {
+      |       ^~~~~
+../src/Block.h:15:7: note:   candidate expects 1 argument, 7 provided
+../src/Block.h:15:7: note: candidate: 'constexpr Block::Block(Block&&)'
+../src/Block.h:15:7: note:   candidate expects 1 argument, 7 provided
+../src/main.cpp:234:44: error: no matching function for call to 'Block::Block(int, int, int, int, int, int, bool)'
+  234 |    Block block9(220, 270, 15, 50, 3, 1,true);
+      |                                            ^
+In file included from ../src/main.cpp:6:
+../src/Block.h:29:2: note: candidate: 'Block::Block()'
+   29 |  Block();
+      |  ^~~~~
+../src/Block.h:29:2: note:   candidate expects 0 arguments, 7 provided
+../src/Block.h:15:7: note: candidate: 'constexpr Block::Block(const Block&)'
+   15 | class Block {
+      |       ^~~~~
+../src/Block.h:15:7: note:   candidate expects 1 argument, 7 provided
+../src/Block.h:15:7: note: candidate: 'constexpr Block::Block(Block&&)'
+../src/Block.h:15:7: note:   candidate expects 1 argument, 7 provided
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:303:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  303 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:304:7: warning: unused variable 'actTime' [-Wunused-variable]
+  304 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+make: *** [src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+13:14:56 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:305:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  305 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:306:7: warning: unused variable 'actTime' [-Wunused-variable]
+  306 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+d:/osm/smartdev.v.0.12/smartdev/gcc_linux_abi_x86_64/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/bin/ld.exe: ./src/main.o: in function `main':
+D:\OSM\ARKANOID\Arkanoid\ARosMiBase\SIMOUT/../src/main.cpp:29: undefined reference to `Block::Block()'
+collect2.exe: error: ld returned 1 exit status
+make: *** [ARosMiBase] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+13:18:29 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:305:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  305 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:306:7: warning: unused variable 'actTime' [-Wunused-variable]
+  306 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+13:23:54 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:305:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  305 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:306:7: warning: unused variable 'actTime' [-Wunused-variable]
+  306 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+13:38:53 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:324:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  324 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:325:7: warning: unused variable 'actTime' [-Wunused-variable]
+  325 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+13:39:51 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:324:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  324 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:325:7: warning: unused variable 'actTime' [-Wunused-variable]
+  325 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+13:42:58 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:335:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  335 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:336:7: warning: unused variable 'actTime' [-Wunused-variable]
+  336 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+13:46:07 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:336:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  336 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:337:7: warning: unused variable 'actTime' [-Wunused-variable]
+  337 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+13:48:19 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:336:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  336 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:337:7: warning: unused variable 'actTime' [-Wunused-variable]
+  337 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+In file included from ../src/main.cpp:6:
+../src/Block.h: In constructor 'Block::Block()':
+../src/Block.h:31:11: warning: '*<unknown>.Block::x' is used uninitialized in this function [-Wuninitialized]
+   31 |   right = x + width;
+      |           ^
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+13:49:17 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:336:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  336 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:337:7: warning: unused variable 'actTime' [-Wunused-variable]
+  337 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+In file included from ../src/main.cpp:6:
+../src/Block.h: In constructor 'Block::Block()':
+../src/Block.h:31:17: warning: '*<unknown>.Block::x' is used uninitialized in this function [-Wuninitialized]
+   31 |   right = this->x + width;
+      |           ~~~~~~^
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+13:51:31 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:336:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  336 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:337:7: warning: unused variable 'actTime' [-Wunused-variable]
+  337 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+13:58:31 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:35:2: error: too many initializers for 'unsigned int [3]'
+   35 |  };
+      |  ^
+../src/main.cpp:39:2: error: too many initializers for 'unsigned int [3]'
+   39 |  };
+      |  ^
+../src/main.cpp:250:23: error: 'tabLive' was not declared in this scope
+  250 |     blocks[i].setLive(tabLive[i]);
+      |                       ^~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:335:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  335 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:336:7: warning: unused variable 'actTime' [-Wunused-variable]
+  336 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+make: *** [src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+13:58:55 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:35:2: error: too many initializers for 'unsigned int [5]'
+   35 |  };
+      |  ^
+../src/main.cpp:39:2: error: too many initializers for 'unsigned int [5]'
+   39 |  };
+      |  ^
+../src/main.cpp:43:2: error: too many initializers for 'unsigned int [3]'
+   43 |  };
+      |  ^
+../src/main.cpp:250:23: error: 'tabLive' was not declared in this scope
+  250 |     blocks[i].setLive(tabLive[i]);
+      |                       ^~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:335:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  335 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:336:7: warning: unused variable 'actTime' [-Wunused-variable]
+  336 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+make: *** [src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+13:59:15 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:250:23: error: 'tabLive' was not declared in this scope
+  250 |     blocks[i].setLive(tabLive[i]);
+      |                       ^~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:335:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  335 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:336:7: warning: unused variable 'actTime' [-Wunused-variable]
+  336 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+make: *** [src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+13:59:35 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:334:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  334 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:335:7: warning: unused variable 'actTime' [-Wunused-variable]
+  335 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+14:01:41 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:47:19: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+   47 |  for(int i = 0; i < number_of_blocks; i++)
+      |                 ~~^~~~~~~~~~~~~~~~~~
+../src/main.cpp:248:21: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  248 |    for(int i = 0; i < number_of_blocks; i++)
+      |                   ~~^~~~~~~~~~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:336:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  336 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:337:7: warning: unused variable 'actTime' [-Wunused-variable]
+  337 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+14:11:10 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:298:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  298 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:299:7: warning: unused variable 'actTime' [-Wunused-variable]
+  299 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+14:13:29 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:299:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  299 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:300:7: warning: unused variable 'actTime' [-Wunused-variable]
+  300 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+14:15:34 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:299:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  299 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:300:7: warning: unused variable 'actTime' [-Wunused-variable]
+  300 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+14:19:34 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:299:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  299 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:300:7: warning: unused variable 'actTime' [-Wunused-variable]
+  300 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+14:26:17 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:299:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  299 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:300:7: warning: unused variable 'actTime' [-Wunused-variable]
+  300 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+14:27:41 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:299:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  299 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:300:7: warning: unused variable 'actTime' [-Wunused-variable]
+  300 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+14:41:28 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:79:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   79 |   DrawTxt(480, 20, "SCORE", 5);
+      |                    ^~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:277:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  277 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:278:7: warning: unused variable 'actTime' [-Wunused-variable]
+  278 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+14:42:50 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:79:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   79 |   DrawTxt(480, 200, "SCORE", 5);
+      |                     ^~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:278:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  278 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:279:7: warning: unused variable 'actTime' [-Wunused-variable]
+  279 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+14:45:47 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:79:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   79 |   DrawTxt(480, 200, "SCORE :", 5);
+      |                     ^~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:279:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  279 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:280:7: warning: unused variable 'actTime' [-Wunused-variable]
+  280 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+14:47:25 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:79:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   79 |   DrawTxt(480, 200, "SCORE :", 5);
+      |                     ^~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:279:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  279 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:280:7: warning: unused variable 'actTime' [-Wunused-variable]
+  280 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+14:52:57 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:79:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   79 |   DrawTxt(480, 200, "SCORE :", 5);
+      |                     ^~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:283:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  283 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:284:7: warning: unused variable 'actTime' [-Wunused-variable]
+  284 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+15:01:27 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:81:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   81 |   DrawTxt(480, 200, "SCORE :", 5);
+      |                     ^~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:284:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  284 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:285:7: warning: unused variable 'actTime' [-Wunused-variable]
+  285 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+15:03:28 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:81:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   81 |   DrawTxt(480, 200, "POINTS :", 5);
+      |                     ^~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:284:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  284 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:285:7: warning: unused variable 'actTime' [-Wunused-variable]
+  285 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+15:03:49 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:81:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   81 |   DrawTxt(480, 200, "POINTS :", 5);
+      |                     ^~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:283:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  283 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:284:7: warning: unused variable 'actTime' [-Wunused-variable]
+  284 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+15:05:49 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:81:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   81 |   DrawTxt(480, 200, "POINTS :", 5);
+      |                     ^~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:283:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  283 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:284:7: warning: unused variable 'actTime' [-Wunused-variable]
+  284 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+15:06:47 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:81:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   81 |   DrawTxt(440, 200, "POINTS :", 5);
+      |                     ^~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:283:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  283 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:284:7: warning: unused variable 'actTime' [-Wunused-variable]
+  284 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+15:07:39 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:81:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   81 |   DrawTxt(440, 200, "POINTS :", 5);
+      |                     ^~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:283:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  283 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:284:7: warning: unused variable 'actTime' [-Wunused-variable]
+  284 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+15:08:58 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:81:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   81 |   DrawTxt(440, 200, "POINTS :", 5);
+      |                     ^~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:283:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  283 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:284:7: warning: unused variable 'actTime' [-Wunused-variable]
+  284 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+15:09:34 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:81:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   81 |   DrawTxt(440, 200, "POINTS:", 5);
+      |                     ^~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:283:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  283 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:284:7: warning: unused variable 'actTime' [-Wunused-variable]
+  284 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+15:10:39 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:81:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   81 |   DrawTxt(440, 200, "POINTS:", 7);
+      |                     ^~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:283:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  283 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:284:7: warning: unused variable 'actTime' [-Wunused-variable]
+  284 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+15:14:00 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:81:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   81 |   DrawTxt(440, 200, "POINTS:", 7);
+      |                     ^~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:283:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  283 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:284:7: warning: unused variable 'actTime' [-Wunused-variable]
+  284 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+15:15:12 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:81:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   81 |   DrawTxt(440, 200, "POINTS:", 7);
+      |                     ^~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:283:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  283 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:284:7: warning: unused variable 'actTime' [-Wunused-variable]
+  284 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+15:16:51 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:81:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   81 |   DrawTxt(440, 200, "POINTS:", 7);
+      |                     ^~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:283:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  283 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:284:7: warning: unused variable 'actTime' [-Wunused-variable]
+  284 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+15:23:32 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:81:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   81 |   DrawTxt(440, 200, "POINTS:", 7);
+      |                     ^~~~~~~~~
+../src/main.cpp:84:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   84 |   DrawTxt(440, 150, "NUM0 - MENU", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:288:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  288 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:289:7: warning: unused variable 'actTime' [-Wunused-variable]
+  289 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+15:25:27 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:81:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   81 |   DrawTxt(440, 200, "POINTS:", 7);
+      |                     ^~~~~~~~~
+../src/main.cpp:84:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   84 |   DrawTxt(420, 400, "NUM0 - MENU", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:288:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  288 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:289:7: warning: unused variable 'actTime' [-Wunused-variable]
+  289 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+15:26:08 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:81:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   81 |   DrawTxt(440, 200, "POINTS:", 7);
+      |                     ^~~~~~~~~
+../src/main.cpp:84:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   84 |   DrawTxt(550, 400, "NUM0 - MENU", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:288:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  288 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:289:7: warning: unused variable 'actTime' [-Wunused-variable]
+  289 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+15:27:46 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:81:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   81 |   DrawTxt(440, 200, "POINTS:", 7);
+      |                     ^~~~~~~~~
+../src/main.cpp:84:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   84 |   DrawTxt(420, 400, "NUM4 - LEFT", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp:85:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   85 |   DrawTxt(420, 470, "NUM6 - RIGHT", 12);
+      |                     ^~~~~~~~~~~~~~
+../src/main.cpp:86:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   86 |   DrawTxt(420, 454, "NUM0 - MENU", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:291:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  291 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:292:7: warning: unused variable 'actTime' [-Wunused-variable]
+  292 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+15:29:07 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:81:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   81 |   DrawTxt(440, 200, "POINTS:", 7);
+      |                     ^~~~~~~~~
+../src/main.cpp:84:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   84 |   DrawTxt(420, 400, "NUM4 - LEFT", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp:85:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   85 |   DrawTxt(420, 470, "NUM6 - RIGHT", 12);
+      |                     ^~~~~~~~~~~~~~
+../src/main.cpp:86:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   86 |   DrawTxt(420, 540, "NUM0 - MENU", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:291:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  291 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:292:7: warning: unused variable 'actTime' [-Wunused-variable]
+  292 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+15:29:51 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:81:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   81 |   DrawTxt(440, 200, "POINTS:", 7);
+      |                     ^~~~~~~~~
+../src/main.cpp:84:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   84 |   DrawTxt(420, 400, "NUM4 - LEFT", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp:85:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   85 |   DrawTxt(420, 470, "NUM6 - RIGHT", 12);
+      |                     ^~~~~~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:291:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  291 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:292:7: warning: unused variable 'actTime' [-Wunused-variable]
+  292 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+15:30:25 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:81:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   81 |   DrawTxt(440, 200, "POINTS:", 7);
+      |                     ^~~~~~~~~
+../src/main.cpp:84:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   84 |   DrawTxt(420, 400, "NUM4 - LEFT", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:291:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  291 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:292:7: warning: unused variable 'actTime' [-Wunused-variable]
+  292 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+15:31:24 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:81:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   81 |   DrawTxt(440, 200, "POINTS:", 7);
+      |                     ^~~~~~~~~
+../src/main.cpp:84:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   84 |   DrawTxt(420, 300, "NUM4 - LEFT", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:291:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  291 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:292:7: warning: unused variable 'actTime' [-Wunused-variable]
+  292 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+15:31:43 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:81:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   81 |   DrawTxt(440, 200, "POINTS:", 7);
+      |                     ^~~~~~~~~
+../src/main.cpp:84:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   84 |   DrawTxt(420, 300, "NUM4 - LEFT", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp:85:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   85 |   DrawTxt(420, 350, "NUM6 - RIGHT", 12);
+      |                     ^~~~~~~~~~~~~~
+../src/main.cpp:86:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   86 |   DrawTxt(420, 400, "NUM0 - MENU", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:291:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  291 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:292:7: warning: unused variable 'actTime' [-Wunused-variable]
+  292 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+15:32:31 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:81:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   81 |   DrawTxt(440, 200, "POINTS:", 7);
+      |                     ^~~~~~~~~
+../src/main.cpp:84:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   84 |   DrawTxt(420, 330, "NUM4 - LEFT", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp:85:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   85 |   DrawTxt(420, 380, "NUM6 - RIGHT", 12);
+      |                     ^~~~~~~~~~~~~~
+../src/main.cpp:86:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   86 |   DrawTxt(420, 420, "NUM0 - MENU", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:291:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  291 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:292:7: warning: unused variable 'actTime' [-Wunused-variable]
+  292 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+15:53:49 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:81:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   81 |   DrawTxt(440, 200, "POINTS:", 7);
+      |                     ^~~~~~~~~
+../src/main.cpp:84:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   84 |   DrawTxt(420, 340, "NUM4 - LEFT", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp:85:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   85 |   DrawTxt(420, 380, "NUM6 - RIGHT", 12);
+      |                     ^~~~~~~~~~~~~~
+../src/main.cpp:86:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   86 |   DrawTxt(420, 420, "NUM0 - MENU", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:291:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  291 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:292:7: warning: unused variable 'actTime' [-Wunused-variable]
+  292 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+15:58:01 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:81:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   81 |   DrawTxt(440, 200, "POINTS:", 7);
+      |                     ^~~~~~~~~
+../src/main.cpp:84:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   84 |   DrawTxt(420, 340, "NUM4 - LEFT", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp:85:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   85 |   DrawTxt(420, 380, "NUM6 - RIGHT", 12);
+      |                     ^~~~~~~~~~~~~~
+../src/main.cpp:86:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   86 |   DrawTxt(420, 420, "NUM0 - MENU", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:298:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  298 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:299:7: warning: unused variable 'actTime' [-Wunused-variable]
+  299 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+16:10:32 **** Incremental Build of configuration LABOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+arm-linux-gnueabihf-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:69:33: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   DrawTxt(440, 200, "POINTS:", 7);
+                                 ^
+../src/main.cpp:72:38: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   DrawTxt(420, 340, "NUM4 - LEFT", 11);
+                                      ^
+../src/main.cpp:73:39: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   DrawTxt(420, 380, "NUM6 - RIGHT", 12);
+                                       ^
+../src/main.cpp:74:38: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   DrawTxt(420, 420, "NUM0 - MENU", 11);
+                                      ^
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:277:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+       ^~~~~~~~
+../src/main.cpp:278:7: warning: unused variable 'actTime' [-Wunused-variable]
+  long actTime = globalTimer_ms;
+       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+arm-linux-gnueabihf-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+16:11:00 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:69:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   69 |   DrawTxt(440, 200, "POINTS:", 7);
+      |                     ^~~~~~~~~
+../src/main.cpp:72:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   72 |   DrawTxt(420, 340, "NUM4 - LEFT", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp:73:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   73 |   DrawTxt(420, 380, "NUM6 - RIGHT", 12);
+      |                     ^~~~~~~~~~~~~~
+../src/main.cpp:74:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   74 |   DrawTxt(420, 420, "NUM0 - MENU", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:277:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  277 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:278:7: warning: unused variable 'actTime' [-Wunused-variable]
+  278 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+16:15:39 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:69:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   69 |   DrawTxt(440, 200, "POINTS:", 7);
+      |                     ^~~~~~~~~
+../src/main.cpp:72:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   72 |   DrawTxt(420, 340, "NUM4 - LEFT", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp:73:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   73 |   DrawTxt(420, 380, "NUM6 - RIGHT", 12);
+      |                     ^~~~~~~~~~~~~~
+../src/main.cpp:74:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   74 |   DrawTxt(420, 420, "NUM0 - MENU", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:277:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  277 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:278:7: warning: unused variable 'actTime' [-Wunused-variable]
+  278 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+16:16:28 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:69:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   69 |   DrawTxt(440, 200, "POINTS:", 7);
+      |                     ^~~~~~~~~
+../src/main.cpp:72:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   72 |   DrawTxt(420, 340, "NUM4 - LEFT", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp:73:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   73 |   DrawTxt(420, 380, "NUM6 - RIGHT", 12);
+      |                     ^~~~~~~~~~~~~~
+../src/main.cpp:74:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   74 |   DrawTxt(420, 420, "NUM0 - MENU", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:277:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  277 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:278:7: warning: unused variable 'actTime' [-Wunused-variable]
+  278 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+16:17:36 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:69:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   69 |   DrawTxt(440, 200, "POINTS:", 7);
+      |                     ^~~~~~~~~
+../src/main.cpp:72:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   72 |   DrawTxt(420, 340, "NUM4 - LEFT", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp:73:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   73 |   DrawTxt(420, 380, "NUM6 - RIGHT", 12);
+      |                     ^~~~~~~~~~~~~~
+../src/main.cpp:74:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   74 |   DrawTxt(420, 420, "NUM0 - MENU", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:277:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  277 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:278:7: warning: unused variable 'actTime' [-Wunused-variable]
+  278 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+16:20:18 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:69:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   69 |   DrawTxt(440, 200, "POINTS:", 7);
+      |                     ^~~~~~~~~
+../src/main.cpp:72:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   72 |   DrawTxt(420, 340, "NUM4 - LEFT", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp:73:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   73 |   DrawTxt(420, 380, "NUM6 - RIGHT", 12);
+      |                     ^~~~~~~~~~~~~~
+../src/main.cpp:74:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   74 |   DrawTxt(420, 420, "NUM0 - MENU", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:277:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  277 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:278:7: warning: unused variable 'actTime' [-Wunused-variable]
+  278 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+16:22:29 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:69:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   69 |   DrawTxt(440, 200, "POINTS:", 7);
+      |                     ^~~~~~~~~
+../src/main.cpp:72:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   72 |   DrawTxt(420, 340, "NUM4 - LEFT", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp:73:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   73 |   DrawTxt(420, 380, "NUM6 - RIGHT", 12);
+      |                     ^~~~~~~~~~~~~~
+../src/main.cpp:74:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   74 |   DrawTxt(420, 420, "NUM0 - MENU", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:277:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  277 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:278:7: warning: unused variable 'actTime' [-Wunused-variable]
+  278 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+16:51:02 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:69:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   69 |   DrawTxt(440, 200, "POINTS:", 7);
+      |                     ^~~~~~~~~
+../src/main.cpp:72:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   72 |   DrawTxt(420, 340, "NUM4 - LEFT", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp:73:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   73 |   DrawTxt(420, 380, "NUM6 - RIGHT", 12);
+      |                     ^~~~~~~~~~~~~~
+../src/main.cpp:74:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   74 |   DrawTxt(420, 420, "NUM0 - MENU", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:297:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  297 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:298:7: warning: unused variable 'actTime' [-Wunused-variable]
+  298 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+16:55:11 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:69:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   69 |   DrawTxt(440, 200, "POINTS:", 7);
+      |                     ^~~~~~~~~
+../src/main.cpp:72:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   72 |   DrawTxt(420, 340, "NUM4 - LEFT", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp:73:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   73 |   DrawTxt(420, 380, "NUM6 - RIGHT", 12);
+      |                     ^~~~~~~~~~~~~~
+../src/main.cpp:74:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   74 |   DrawTxt(420, 420, "NUM0 - MENU", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:292:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  292 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:293:7: warning: unused variable 'actTime' [-Wunused-variable]
+  293 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+16:58:43 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:69:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   69 |   DrawTxt(440, 200, "POINTS:", 7);
+      |                     ^~~~~~~~~
+../src/main.cpp:72:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   72 |   DrawTxt(420, 340, "NUM4 - LEFT", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp:73:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   73 |   DrawTxt(420, 380, "NUM6 - RIGHT", 12);
+      |                     ^~~~~~~~~~~~~~
+../src/main.cpp:74:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   74 |   DrawTxt(420, 420, "NUM0 - MENU", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:300:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  300 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:301:7: warning: unused variable 'actTime' [-Wunused-variable]
+  301 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+16:59:51 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:69:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   69 |   DrawTxt(440, 200, "POINTS:", 7);
+      |                     ^~~~~~~~~
+../src/main.cpp:72:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   72 |   DrawTxt(420, 340, "NUM4 - LEFT", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp:73:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   73 |   DrawTxt(420, 380, "NUM6 - RIGHT", 12);
+      |                     ^~~~~~~~~~~~~~
+../src/main.cpp:74:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   74 |   DrawTxt(420, 420, "NUM0 - MENU", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:303:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  303 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:304:7: warning: unused variable 'actTime' [-Wunused-variable]
+  304 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+17:01:23 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:69:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   69 |   DrawTxt(440, 200, "POINTS:", 7);
+      |                     ^~~~~~~~~
+../src/main.cpp:72:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   72 |   DrawTxt(420, 340, "NUM4 - LEFT", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp:73:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   73 |   DrawTxt(420, 380, "NUM6 - RIGHT", 12);
+      |                     ^~~~~~~~~~~~~~
+../src/main.cpp:74:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   74 |   DrawTxt(420, 420, "NUM0 - MENU", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:303:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  303 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:304:7: warning: unused variable 'actTime' [-Wunused-variable]
+  304 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+17:03:20 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:69:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   69 |   DrawTxt(440, 200, "POINTS:", 7);
+      |                     ^~~~~~~~~
+../src/main.cpp:72:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   72 |   DrawTxt(420, 340, "NUM4 - LEFT", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp:73:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   73 |   DrawTxt(420, 380, "NUM6 - RIGHT", 12);
+      |                     ^~~~~~~~~~~~~~
+../src/main.cpp:74:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   74 |   DrawTxt(420, 420, "NUM0 - MENU", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:303:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  303 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:304:7: warning: unused variable 'actTime' [-Wunused-variable]
+  304 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+17:05:49 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:69:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   69 |   DrawTxt(440, 200, "POINTS:", 7);
+      |                     ^~~~~~~~~
+../src/main.cpp:72:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   72 |   DrawTxt(420, 340, "NUM4 - LEFT", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp:73:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   73 |   DrawTxt(420, 380, "NUM6 - RIGHT", 12);
+      |                     ^~~~~~~~~~~~~~
+../src/main.cpp:74:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   74 |   DrawTxt(420, 420, "NUM0 - MENU", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:303:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  303 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:304:7: warning: unused variable 'actTime' [-Wunused-variable]
+  304 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+17:15:56 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:69:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   69 |   DrawTxt(440, 200, "POINTS:", 7);
+      |                     ^~~~~~~~~
+../src/main.cpp:72:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   72 |   DrawTxt(420, 340, "NUM4 - LEFT", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp:73:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   73 |   DrawTxt(420, 380, "NUM6 - RIGHT", 12);
+      |                     ^~~~~~~~~~~~~~
+../src/main.cpp:74:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   74 |   DrawTxt(420, 420, "NUM0 - MENU", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:327:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  327 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:328:7: warning: unused variable 'actTime' [-Wunused-variable]
+  328 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+17:18:15 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:69:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   69 |   DrawTxt(440, 200, "POINTS:", 7);
+      |                     ^~~~~~~~~
+../src/main.cpp:72:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   72 |   DrawTxt(420, 340, "NUM4 - LEFT", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp:73:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   73 |   DrawTxt(420, 380, "NUM6 - RIGHT", 12);
+      |                     ^~~~~~~~~~~~~~
+../src/main.cpp:74:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   74 |   DrawTxt(420, 420, "NUM0 - MENU", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:327:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  327 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:328:7: warning: unused variable 'actTime' [-Wunused-variable]
+  328 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+17:21:26 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:69:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   69 |   DrawTxt(440, 200, "POINTS:", 7);
+      |                     ^~~~~~~~~
+../src/main.cpp:72:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   72 |   DrawTxt(420, 340, "NUM4 - LEFT", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp:73:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   73 |   DrawTxt(420, 380, "NUM6 - RIGHT", 12);
+      |                     ^~~~~~~~~~~~~~
+../src/main.cpp:74:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   74 |   DrawTxt(420, 420, "NUM0 - MENU", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:329:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  329 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:330:7: warning: unused variable 'actTime' [-Wunused-variable]
+  330 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+17:22:51 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:69:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   69 |   DrawTxt(440, 200, "POINTS:", 7);
+      |                     ^~~~~~~~~
+../src/main.cpp:72:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   72 |   DrawTxt(420, 340, "NUM4 - LEFT", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp:73:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   73 |   DrawTxt(420, 380, "NUM6 - RIGHT", 12);
+      |                     ^~~~~~~~~~~~~~
+../src/main.cpp:74:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   74 |   DrawTxt(420, 420, "NUM0 - MENU", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:330:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  330 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:331:7: warning: unused variable 'actTime' [-Wunused-variable]
+  331 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+17:24:51 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: Cross G++ Compiler'
+x86_64-linux-gnu-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:69:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   69 |   DrawTxt(440, 200, "POINTS:", 7);
+      |                     ^~~~~~~~~
+../src/main.cpp:72:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   72 |   DrawTxt(420, 340, "NUM4 - LEFT", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp:73:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   73 |   DrawTxt(420, 380, "NUM6 - RIGHT", 12);
+      |                     ^~~~~~~~~~~~~~
+../src/main.cpp:74:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   74 |   DrawTxt(420, 420, "NUM0 - MENU", 11);
+      |                     ^~~~~~~~~~~~~
+../src/main.cpp: In function 'void PrintDiagnosticInfo()':
+../src/main.cpp:330:7: warning: unused variable 'TimeDiff' [-Wunused-variable]
+  330 |  long TimeDiff = (tTime.tv_sec * 1000 + tTime.tv_usec / 1000) - startTime_ms;
+      |       ^~~~~~~~
+../src/main.cpp:331:7: warning: unused variable 'actTime' [-Wunused-variable]
+  331 |  long actTime = globalTimer_ms;
+      |       ^~~~~~~
+'Finished building: ../src/main.cpp'
+' '
+'Building target: ARosMiBase'
+'Invoking: Cross G++ Linker'
+x86_64-linux-gnu-g++  -o "ARosMiBase"  ./src/main.o ./src/peripherals.o ./src/utilities.o   -lpthread
+'Finished building target: ARosMiBase'
+' '
+17:44:32 **** Incremental Build of configuration SIMOUT for project ARosMiBase ****
+make all 
+make: Nothing to be done for `all'.

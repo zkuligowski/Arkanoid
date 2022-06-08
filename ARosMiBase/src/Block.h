@@ -15,19 +15,20 @@
 class Block {
 	short int x; // x is left
 	short int y; // y is top
-	short int length;
-	short int width;
-	short int right;
-	short int bottom;
+	short int length = 15;
+	short int width = 50;
+	short int right;// = x + width;
+	short int bottom;// = y + length;
 	short int live;
 	short int colour;
-	bool can_drop;
+	bool can_drop = true;
 	short int drop_number;
 
 public:
 
-	Block();
+	//Block();
 
+/*
 	Block(int block_x, int block_y, int block_length, int block_width, short int live, unsigned char colour, bool can_drop)
 	{
 		this->x = block_x;
@@ -40,7 +41,7 @@ public:
 		this->colour = colour;
 		this->can_drop = can_drop;
 	}
-
+*/
 	void CheckDrop()
 	{
 		if(can_drop == true)
@@ -150,6 +151,7 @@ public:
 
 	void setX(short int x) {
 		this->x = x;
+		right = x + width;
 	}
 
 	short int getY() const {
@@ -158,6 +160,7 @@ public:
 
 	void setY(short int y) {
 		this->y = y;
+		bottom = y + length;
 	}
 
 	short int getLive() const {
@@ -174,6 +177,34 @@ public:
 
 	void setDropNumber(short int dropNumber) {
 		drop_number = dropNumber;
+	}
+
+	short int getColour() const {
+		return colour;
+	}
+
+	void setColour(short int colour) {
+		this->colour = colour;
+		if(colour == 1)
+		{
+			live = 3;
+		}
+		else if(colour == 2)
+		{
+			live = 2;
+		}
+		else if(colour == 3)
+		{
+			live = 1;
+		}
+	}
+
+	bool isCanDrop() const {
+		return can_drop;
+	}
+
+	void setCanDrop(bool canDrop) {
+		can_drop = canDrop;
 	}
 };
 

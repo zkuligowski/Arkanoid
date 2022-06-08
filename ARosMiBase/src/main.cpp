@@ -6,6 +6,7 @@
 #include "Block.h"
 #include "Game.h"
 #include "GUI.h"
+#include "Font.h"
 
 
 #include <list>
@@ -24,33 +25,54 @@ int main(int argc, char *argv[]) {
 
 
 	Ball ball;
-	Paddle paddle;
-	Block block1(100, 50, 15, 50, 3, 1, true);
-	Block block2(160, 80, 15, 50, 1, 3, true);
-	Block block3(220, 100, 15, 50, 3, 1,true);
-	Block block4(100, 120, 15, 50, 2, 2,true);
-	Block block5(160, 150, 15, 50, 3, 1,true);
-	Block block6(220, 180, 15, 50, 2, 2,true);
-	Block block7(100, 210, 15, 50, 1, 3,true);
-	Block block8(160, 240, 15, 50, 2, 2,true);
-	Block block9(220, 270, 15, 50, 3, 1,true);
 
+
+	Paddle paddle;
+
+	int number_of_blocks = 36;
+	Block *blocks = new Block[number_of_blocks];
 	list<Block> block_list;
 
-	block_list.push_back(block1);
-	block_list.push_back(block2);
-	block_list.push_back(block3);
-	block_list.push_back(block4);
-	block_list.push_back(block5);
-	block_list.push_back(block6);
-	block_list.push_back(block7);
-	block_list.push_back(block8);
-	block_list.push_back(block9);
+	unsigned int tabX[number_of_blocks] = {
+			40,100,160,210,270,330,
+			40,100,160,210,270,330,
+			40,100,160,210,270,330,
+			40,100,160,210,270,330,
+			40,100,160,210,270,330,
+			40,100,160,210,270,330,
+
+	};
+	unsigned int tabY[number_of_blocks] = {
+			50,50,50,50,50,50,
+			100,100,100,100,100,100,
+			150,150,150,150,150,150,
+			200,200,200,200,200,200,
+			250,250,250,250,250,250,
+			300,300,300,300,300,300
+
+	};
+
+	unsigned int tabColour[number_of_blocks] = {
+			3,3,3,3,3,3,
+			3,2,2,2,2,3,
+			3,2,1,1,2,3,
+			3,2,1,1,2,3,
+			3,2,2,2,2,3,
+			3,3,3,3,3,3
+	};
+
 
 	while (1) {
 		UpdateIO();
 		PrintDiagnosticInfo();
 		ClearScreen();
+		DrawTxt(440, 200, "POINTS:", 7);
+		//DrawChar(560, 300, &Font24_Table[1872]);
+		PrintInt(560, 200, game.getPoints());
+		DrawTxt(420, 340, "NUM4 - LEFT", 11);
+		DrawTxt(420, 380, "NUM6 - RIGHT", 12);
+		DrawTxt(420, 420, "NUM0 - MENU", 11);
+
 
 		if(gui1.getScreen() == 1)
 		{
@@ -58,153 +80,191 @@ int main(int argc, char *argv[]) {
 		}
 		else if(gui1.getScreen() == 2)
 		{
-			gui1.SetBackground(400, 480, tab_background1);
 			gui1.DrawLives(game.getLives(), tab_heart);
 			gui1.SetLogo(tab_logo);
-			paddle.MovePaddle();
-			paddle.DrawPaddle();
-			if (game.isGameover() == false) {
+
+			if (game.isGameover() == false)
+			{
+				gui1.SetBackground(400, 480, tab_background1);
+				paddle.MovePaddle();
+				paddle.DrawPaddle();
 				ball.DrawBall();
 				ball.MoveBall();
-			}
 
-			if (((ball.getY() + ball.getHeight()) >= 469) && ((ball.getY() + ball.getHeight()) <= 471))
-			{
-				if (ball.getX() >= paddle.getPosition() - ball.getWidth()
-						&& ball.getX()
-						<= paddle.getPosition() + paddle.getWidth()) {
-					ball.setDy(-(ball.getDy()));
-				}
-			}
+				if (((ball.getY() + ball.getHeight()) >= 469) && ((ball.getY() + ball.getHeight()) <= 471))
+				{
+					if (ball.getX() >= paddle.getPosition() - ball.getWidth()
+							&& ball.getX()
+							<= paddle.getPosition() + paddle.getWidth()) {
+						ball.setDy(-(ball.getDy()));
 
-			//THIS IS TEMPORARY
-			//ONLY TO PREVENT FROM CRASH PROGRAM
-			else if ((ball.getY() + ball.getHeight()) > 480) {
-				ball.setX(50);
-				ball.setY(50);
-				game.SubstractLive();
-				if (game.getLives() == 0)
-					game.GameOver();
-			}
+						if (getKey() == 75) {
+							ball.setDx(ball.getDx() - 2);
 
-			//Draw the blocks
-			//and bouncing off the blocks
-			for (auto &block_index : block_list) {
-
-				if (block_index.getLive() >= 1) {
-					block_index.DrawBlock();
-
-					if (ball.getBottom() >= block_index.getY()
-							&& ball.getY() <= block_index.getBottom()) {
-						if ((ball.getX() >= block_index.getRight() - 1 && ball.getX() <= block_index.getRight() + 1)
-								|| (ball.getRight() >= block_index.getX() - 1 && ball.getRight() <= block_index.getX() + 1))
+						}
+						else if (getKey() == 77)
 						{
-							if(ball.isIsFireball() == false)
-							{
-								ball.setDx(-(ball.getDx()));
-								block_index.SubstractLive();
-							}
-							else
-							{
-								block_index.DestroyBlock();
-								ball.Add_collision_counter();
-								//printf("kol =  %d\n", ball.getCollisionCounter());
-								if(ball.getCollisionCounter() >= 4)
-								{
-									ball.Reset_collision_counter();
-									ball.setIsFireball(false);
-								}
-							}
-							game.AddPoint();
-
-							if(block_index.getLive() == 0)
-							{
-								block_index.CheckDrop();
-								if(block_index.getDropNumber() == 1)
-								{
-									ball.setIsFireball(true);
-								}
-							}
-
-
-
-
-
-
-						}
-					}
-
-					if (ball.getRight() > block_index.getX()
-							&& ball.getX() < block_index.getRight()) {
-						if ((ball.getY() >= block_index.getBottom() - 1 && ball.getY() <= block_index.getBottom() + 1)
-								|| (ball.getBottom() >= block_index.getY() - 1 && ball.getBottom() <= block_index.getY() + 1)) {
-							if(ball.isIsFireball() == false)
-							{
-								ball.setDy(-(ball.getDy()));
-								block_index.SubstractLive();
-							}
-							else
-							{
-								block_index.DestroyBlock();
-								ball.Add_collision_counter();
-								if(ball.getCollisionCounter() >= 4)
-								{
-									ball.Reset_collision_counter();
-									ball.setIsFireball(false);
-								}
-							}
-							game.AddPoint();
-
-							if(block_index.getLive() == 0)
-							{
-								block_index.CheckDrop();
-								if(block_index.getDropNumber() == 1)
-								{
-									ball.setIsFireball(true);
-								}
-							}
-
+							ball.setDx(ball.getDx() + 2);
 						}
 					}
 				}
 
+				//THIS IS TEMPORARY
+				//ONLY TO PREVENT FROM CRASH PROGRAM
+				else if ((ball.getY() + ball.getHeight()) > 480) {
+					ball.SpawnBall();
+					game.SubstractLive();
+					if (game.getLives() == 0)
+						game.GameOver();
+				}
+
+				//Draw the blocks
+				//and bouncing off the blocks
+				int blocks_to_win = 0;
+				for (auto &block_index : block_list) {
+
+					if (block_index.getLive() >= 1) {
+						block_index.DrawBlock();
+
+						if (ball.getBottom() >= block_index.getY()
+								&& ball.getY() <= block_index.getBottom()) {
+							if ((ball.getX() >= block_index.getRight() - 2 && ball.getX() <= block_index.getRight() + 2)
+									|| (ball.getRight() >= block_index.getX() - 2 && ball.getRight() <= block_index.getX() + 2))
+							{
+								if(ball.isIsFireball() == false)
+								{
+									ball.setDx(-(ball.getDx()));
+									block_index.SubstractLive();
+									game.AddPoint(1);
+								}
+								else
+								{
+									block_index.DestroyBlock();
+									ball.Add_collision_counter();
+									game.AddPoint(2);
+									//printf("kol =  %d\n", ball.getCollisionCounter());
+									if(ball.getCollisionCounter() >= 4)
+									{
+										ball.Reset_collision_counter();
+										ball.setIsFireball(false);
+									}
+
+								}
+
+
+								if(block_index.getLive() == 0)
+								{
+									block_index.CheckDrop();
+									if(block_index.getDropNumber() == 1)
+									{
+										ball.setIsFireball(true);
+									}
+								}
+							}
+						}
+
+						if (ball.getRight() > block_index.getX()
+								&& ball.getX() < block_index.getRight()) {
+							if ((ball.getY() >= block_index.getBottom() - 2 && ball.getY() <= block_index.getBottom() + 2)
+									|| (ball.getBottom() >= block_index.getY() - 2 && ball.getBottom() <= block_index.getY() + 2)) {
+								if(ball.isIsFireball() == false)
+								{
+									ball.setDy(-(ball.getDy()));
+									block_index.SubstractLive();
+									game.AddPoint(1);
+								}
+								else
+								{
+									block_index.DestroyBlock();
+									ball.Add_collision_counter();
+									game.AddPoint(2);
+									if(ball.getCollisionCounter() >= 4)
+									{
+										ball.Reset_collision_counter();
+										ball.setIsFireball(false);
+									}
+								}
+
+
+								if(block_index.getLive() == 0)
+								{
+									block_index.CheckDrop();
+									if(block_index.getDropNumber() == 1)
+									{
+										ball.setIsFireball(true);
+									}
+								}
+
+							}
+						}
+					}
+					blocks_to_win +=  block_index.getLive();
+				}
+				if(blocks_to_win == 0)
+					{
+						game.GameOver();
+						game.setGameWon(true);
+					}
 			}
+			else
+			{
+				if(game.isGameWon() == true)
+				{
+					gui1.SetBackground(400, 480, tab_you_win);
+				}
+				else if(game.getLives() == 0)
+				{
+					gui1.SetBackground(400, 480, tab_lostgameimage);
+				}
+
+			}
+			int temp = 0;
+			int temp2 = 0;
+			int move_x = 0;
+			if(ball.isIsFireball()== true)
+			{
+				for(int t = 1; t <= (4 - ball.getCollisionCounter());  t++)
+				{
+					temp2 = 420 + move_x;
+					for (int i = temp2; i < (temp2 + ball.getHeight()); i++) {
+						for (int j = 120; j < 120 + ball.getWidth(); j++) {
+							if(tab_fireball[temp] != 0xffffff)
+							{
+								SetPixel(GRAPH, i, j, tab_fireball[temp]);
+							}
+							temp++;
+						}
+					}
+					move_x = move_x + 20;
+					temp = 0;
+				}
+
+
+			}
+
+
+
+
 		}
-
-
 		//printf("%d\n", game1.getLives());
 
-		if (getKey() == 72) {
-			game.StartGame();
-			for (auto &block_index : block_list) {
-				block_index.AddLive();
-			}
-		}
-		else if(getKey() == 79 && gui1.getScreen() == 1) //Start new Game
+		if(getKey() == 79 && gui1.getScreen() == 1) //Start new Game
 		{
 			gui1.setScreen(2);
 			game.StartGame();
-			ball.setX(50);
-			ball.setY(50);
-			Block block1(100, 50, 15, 50, 3, 1, true);
-			Block block2(160, 80, 15, 50, 1, 3, true);
-			Block block3(220, 100, 15, 50, 3, 1,true);
-			Block block4(100, 120, 15, 50, 2, 2,true);
-			Block block5(160, 150, 15, 50, 3, 1,true);
-			Block block6(220, 180, 15, 50, 2, 2,true);
-			Block block7(100, 210, 15, 50, 1, 3,true);
-			Block block8(160, 240, 15, 50, 2, 2,true);
-			Block block9(220, 270, 15, 50, 3, 1,true);
-			block_list.clear();
-			block_list.push_back(block1);
-			block_list.push_back(block2);
-			block_list.push_back(block3);
-			block_list.push_back(block4);
-			block_list.push_back(block5);
-			block_list.push_back(block6);
-			block_list.push_back(block7);
-			block_list.push_back(block8);
-			block_list.push_back(block9);
+			ball.SpawnBall();
+			ball.setIsFireball(false);
+
+			for(int i = 0; i < number_of_blocks; i++)
+			{
+				blocks[i].setX(tabX[i]);
+				blocks[i].setY(tabY[i]);;
+				blocks[i].setColour(tabColour[i]);
+
+				block_list.push_back(blocks[i]);
+			}
+
+
 		}
 		else if(getKey() == 80 && gui1.getScreen() == 1) //Continue Game
 		{
@@ -214,8 +274,12 @@ int main(int argc, char *argv[]) {
 		{
 			gui1.setScreen(1);
 		}
-
-
+		else if(getKey() == 55)
+		{
+			for (auto &block_index : block_list) {
+				block_index.setLive(0);
+			}
+		}
 
 
 
@@ -392,3 +456,46 @@ void DataPrepare() {
 		} while ((abs(dy[a]) + abs(dx[a])) <= 4);
 	}
 }
+
+void DrawChar(int x, int y, unsigned char *picture) {
+	for (int yy = y; yy < 24 + y; yy++) {
+		for (int xx = x; xx < 24 + x; xx += 8) {
+			for (int i = 0; i < 8; i++) {
+				if (((*picture >> i) & 0x01) == 1) {
+					SetPixel(GRAPH, xx - i + 7, yy, 0xffffff);
+				} else
+					SetPixel(GRAPH, xx - i + 7, yy, 0);
+			}
+			picture++;
+		}
+	}
+}
+
+void DrawNum(int x, int y, char val) {
+	DrawChar(x, y, &Font24_Table[1152 + val * 72]);
+}
+
+void DrawLetter(int x, int y, char val) {
+	DrawChar(x, y, &Font24_Table[2376 + (val - 'A') * 72]);
+}
+
+void DrawTxt(int x, int y, char *a, unsigned char lenght) {
+	for (int i = 0; i < lenght; i++) {
+		if (a[i] == ' ')
+			continue;
+		else
+			DrawLetter(x + 17 * i, y, a[i]);
+	}
+}
+
+void PrintInt(int x, int y, int val) {
+	int str;
+	str = (int) val / 100;
+	DrawNum(x, y, str);
+	val = val - str * 100;
+	str = (int) val / 10;
+	DrawNum(x + 17, y, str);
+	val = val - str * 10;
+	DrawNum(x + 34, y, val);
+}
+

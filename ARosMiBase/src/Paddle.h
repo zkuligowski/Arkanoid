@@ -39,10 +39,10 @@ public:
 			right = false;
 		}
 
-		if (position < 0)
-			position = 0;
-		else if (position > 350)
-			position = 350;
+		if (position < 12)
+			position = 12;
+		else if (position > 340)
+			position = 340;
 	}
 
 	void DrawPaddle()

@@ -9,16 +9,17 @@
 #define BALL_H_
 
 #include "main.h"
+#include <random>
 
 namespace std {
 
 //class with ball
 class Ball {
 private:
-	short int dx = 2;
-	short int dy = 2;
-	short int x = 50;
-	short int y = 50;
+	short int dx = -2;
+	short int dy = -2;
+	short int x = 200;
+	short int y = 300;
 	short int width = 10;
 	short int height = 10;
 	short int Bottom;
@@ -35,6 +36,18 @@ public:
 	void Reset_collision_counter()
 	{
 		this->collision_counter = 0;
+	}
+
+	void SpawnBall()
+	{
+		std::random_device rd; // obtain a random number from hardware
+		std::mt19937 gen(rd()); // seed the generator
+		std::uniform_int_distribution<> distr(30, 360); // define the range
+		this->x = distr(gen);
+		printf("%d\n",this->x);
+		this->y = 350;
+		this->dx = -3;
+		this->dy = -3;
 	}
 
 	void MoveBall() {
@@ -72,6 +85,7 @@ public:
 			this->width = 10;
 			this->height = 10;
 		}
+
 
 		for (int i = 0; i < height; i++) {
 			for (int j = 0; j < width; j++) {

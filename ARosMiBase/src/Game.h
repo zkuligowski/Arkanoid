@@ -14,7 +14,8 @@ class Game
 {
 	short int lives;
 	bool gameover = false;
-	short int points;
+	int points;
+	bool game_won = false;
 
 public:
 	void StartGame()
@@ -25,8 +26,8 @@ public:
 
 	}
 
-	void AddPoint(){
-		this->points++;
+	void AddPoint(int point){
+		this->points = this->points + point;
 	}
 
 	void AddLive()
@@ -42,7 +43,7 @@ public:
 	void GameOver()
 	{
 		printf("xD");
-		printf("\nno i chuj przegrales!");
+
 		this->gameover = true;
 	}
 
@@ -62,12 +63,20 @@ public:
 		this->gameover = gameover;
 	}
 
-	short int getPoints() const {
+	int getPoints() const {
 		return points;
 	}
 
-	void setPoints(short int points) {
+	void setPoints(int points) {
 		this->points = points;
+	}
+
+	bool isGameWon() const {
+		return game_won;
+	}
+
+	void setGameWon(bool gameWon = false) {
+		game_won = gameWon;
 	}
 };
 

@@ -37,6 +37,11 @@ void DataPrepare();
 void ClearScreen();
 void DrawObjects();
 void PrintDiagnosticInfo();
+void DrawLetter(int x, int y, char val);
+void DrawNum(int x, int y, char val);
+void DrawChar(int x, int y, unsigned char *pict);
+void DrawTxt(int x, int y, char *a, unsigned char length);
+void PrintInt(int x, int y, int val);
 
 
 #define MaxObj 9000
